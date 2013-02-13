@@ -6,6 +6,6 @@ heading = ["Name", "Science", "Maths", "Computer Science", "English", "Regional 
 wb.add_worksheet(name: "users_list") do |sheet|
   sheet.add_row heading.flatten, :style => style_shout
 
-  sheet.add_row ["Sriram", "150", "149", "130", "125", "150", "148"]
+  sheet.add_row ["Sriram", "150", "149", "130", "125", "150"]
 
 end
