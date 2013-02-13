@@ -1,0 +1,26 @@
+= form_for :marks, url: download_marks_as_excel_marks_path do
+  div
+    | Enter the name of student:
+    = text_field_tag :name
+  div
+    | Enter marks in Science:
+    = text_field_tag :science_marks
+  div
+    | Enter marks in Maths:
+    = text_field_tag :maths_marks
+  div
+    | Enter marks in Computer Science:
+    = text_field_tag :computer_science_marks
+  div
+    | Enter marks in English:
+    = text_field_tag :english_marks
+  div
+    | Enter marks in Regional Language:
+    = text_field_tag :regional_language_marks
+  div
+    = check_box_tag :should_display_pie_chart
+    | Show pie chart in excel file
+  div
+    = submit_tag "Get Excel file"
+.sample_excel
+  = link_to "Download sample excel file", sample_excel_download_marks_path

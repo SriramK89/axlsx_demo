@@ -1,0 +1,20 @@
+wb = xlsx_package.workbook
+
+# Build the Excel
+wb.add_worksheet(name: "users_list") do |sheet|
+  sheet.add_row ["Name", @name]
+  sheet.add_row ["Science", @marks[:science_marks]]
+  sheet.add_row ["Maths", @marks[:maths_marks]]
+  sheet.add_row ["Computer Science", @marks[:computer_science_marks]]
+  sheet.add_row ["English", @marks[:english_marks]]
+  sheet.add_row ["Regional Language", @marks[:regional_language_marks]]
+  sheet.add_row ["Total", @total]
+  sheet.add_row ["Average", (@total/5)]
+
+  if @marks[:should_display_pie_chart].present?
+    sheet.add_chart(Axlsx::Pie3DChart, :start_at => [0,5], :end_at => [10,20], :title => "Marks of #{@name} in Pie Chart") do |chart|
+      chart.add_series :data => sheet["B2:B6"], :labels => sheet["A2:A6"],  :colors => ['FF0000', '00FF00', '0000FF', '999900', '990033']
+    end
+  end
+
+end
