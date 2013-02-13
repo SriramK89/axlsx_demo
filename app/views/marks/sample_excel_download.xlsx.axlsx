@@ -6,16 +6,6 @@ heading = ["Name", "Science", "Maths", "Computer Science", "English", "Regional 
 wb.add_worksheet(name: "users_list") do |sheet|
   sheet.add_row heading.flatten, :style => style_shout
 
-  sheet.add_row ["Mr", "Sriram", "Kumar", "TQMS", "123321", "sriram.kumar@tqms.com", "Solution Architect", "user"]
-
-  title = "Mr/Mrs/Ms/Dr"
-  first_name = "User's first name"
-  last_name = "User's last name"
-  company = "Valid company name"
-  employee_id = "Employee ID of user(only numbers)"
-  email = "User email with valid domain"
-  designation = "User's designation in the company"
-  role = "Role"
-  sheet.add_row [title, first_name, last_name, company, employee_id, email, designation, role].flatten
+  sheet.add_row ["Sriram", "150", "149", "130", "125", "150", "148"]
 
 end
